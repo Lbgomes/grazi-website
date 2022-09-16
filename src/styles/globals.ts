@@ -78,6 +78,9 @@ const GlobalStyles = createGlobalStyle`
     .swal2-popup {
       font-size: 2rem !important;
     }
+    .styles__Arrow-sc-x8z8tz-0{
+      bottom: 50%;
+    }
  
 `
 export default GlobalStyles

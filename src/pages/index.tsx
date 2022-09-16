@@ -6,6 +6,8 @@ import Header from '../components/header'
 import Banner from 'src/components/banner'
 import Profile from 'src/components/profile'
 import Apointment from 'src/components/apointment'
+import Patients from 'src/components/patients'
+
 const Home: NextPage = () => {
   return (
     <>
@@ -13,6 +15,7 @@ const Home: NextPage = () => {
       <Banner />
       <Profile />
       <Apointment />
+      <Patients /> 
     </>
 
   )
