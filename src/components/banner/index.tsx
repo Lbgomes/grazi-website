@@ -2,9 +2,10 @@ import Title from '../Title'
 import Image from 'next/image'
 import * as S from './styles'
 import Button from '../button'
-
+import Waves from '../../../public/images/wavesNegative.svg'
 export default function Banner() {
   return (
+    <>
     <S.Container aria-label="banner">
       <S.Image>
         <Image src="/images/banner.jpg" layout="fill" />
@@ -17,5 +18,9 @@ export default function Banner() {
     <Image src="/images/banner.svg" layout='fill'/>
       <S.Shadow />
     </S.Container>
+      <S.ImageContainer>
+    <Image src={Waves} layout='fill'/>
+      </S.ImageContainer>
+      </>
   )
 }

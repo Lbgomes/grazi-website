@@ -5,6 +5,8 @@ export const Container = styled.div`
     text-align: center;
     color: white;
     height: 60vh;
+    background-image: url( '/images/wavesNegative.svg');
+    z-index: -10;
     @media (max-width: 768px) {
       width: 100%;
       height: auto;
@@ -77,5 +79,18 @@ export const ButtonContainer = styled.div`
     position: absolute;
     top: 50%;
     left: 11%;
+`
+export const ImageContainer = styled.div`
+    margin-top: -50px;
+    z-index: 123123;
+    span{
+      position: unset !important;
+      max-height: 50px;
+    height: 100%;
+    img{
+      position: unset !important;
+      height: 50px !important;
+    }
+    }
 `
 

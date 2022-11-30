@@ -6,12 +6,11 @@ export const Container = styled.div`
   align-items: center;
   gap: 4rem;
   max-width: 90rem;
-  margin: 8rem auto;
+  margin: 7rem auto;
   width: 100%;
   justify-content: space-between;
   height: 40rem;
   align-items: self-start;
-
 `;
 
 export const ImageContainer = styled.div`

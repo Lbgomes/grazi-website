@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
       scroll-behavior: smooth;
 
     }
+    
     body {
       padding: 0;
       background-color: #fff;
@@ -83,4 +84,6 @@ const GlobalStyles = createGlobalStyle`
     }
  
 `
+
+
 export default GlobalStyles
