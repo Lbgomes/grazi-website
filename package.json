@@ -13,6 +13,7 @@
     "@styled-icons/material-rounded": "^10.46.0",
     "framer-motion": "^7.6.15",
     "next": "12.2.5",
+    "next-seo": "^5.14.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-slick": "^0.29.0",
