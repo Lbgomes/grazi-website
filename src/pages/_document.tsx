@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href="img/favicon.png" />
           <link rel="apple-touch-icon" href="img/favicon.png" />
-
+          <title>Grazi Gomes</title>
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#f2f3f5" />
 
