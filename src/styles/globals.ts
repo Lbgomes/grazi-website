@@ -80,9 +80,9 @@ const GlobalStyles = createGlobalStyle`
       font-size: 2rem !important;
     }
     .styles__Arrow-sc-x8z8tz-0{
-      bottom: 50%;
+      bottom: 50% !important;
       @media(max-width: 600px){
-        display: none;
+        display: none !important;
       }
     }
  

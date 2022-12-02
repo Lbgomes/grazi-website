@@ -38,7 +38,7 @@ export const Text = styled.div`
     z-index: 10;
     @media (max-width: 768px) {
     width: auto;
-      top: 5%;
+      top: 10%;
       left: 5%;
     }
 `

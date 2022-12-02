@@ -32,6 +32,7 @@ span, img {
   border-radius: 10px;
   @media(max-width: 500px){
     width: 80vw !important;
+    height: 80vw !important;
   }
 }
 `
