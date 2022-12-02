@@ -5,12 +5,21 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 4rem;
-  max-width: 90rem;
+  max-width: 1000px;
   margin: 7rem auto;
   width: 100%;
   justify-content: space-between;
-  height: 40rem;
   align-items: self-start;
+  @media(max-width: 1100px){
+    width: 90%;
+  }
+  @media(max-width: 800px){
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+  height: auto;
+
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -21,7 +30,9 @@ span, img {
   position: static !important;
   width: 40rem !important;
   border-radius: 10px;
-
+  @media(max-width: 500px){
+    width: 80vw !important;
+  }
 }
 `
 export const TextContainer = styled.div`

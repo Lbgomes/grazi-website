@@ -23,6 +23,10 @@ font-size: 1.1em;
 line-height: 1.6;
 font-weight: 500;
 text-align: center;
+@media(max-width: 500px){
+    width: 90%;
+    margin: 0 auto;
+}
 `
 export const Patient = styled.p`
 font-size: 1.2em;

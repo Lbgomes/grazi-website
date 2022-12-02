@@ -12,7 +12,7 @@ export default function Banner() {
       </S.Image>
       <S.Text>
         <Title size="large" weight="extraBold" text="Terapia Online" />
-        <S.SubTitle>Psicóloga com mais de 20 anos de experiência especialista em relacionamentos interpessoais, adolescentes, adultos e casais.</S.SubTitle>
+        <S.SubTitle>Psicóloga especialista em relacionamentos interpessoais, adolescentes, adultos e casais.</S.SubTitle>
     <Button title='Agendar consulta' />
       </S.Text>
     <Image src="/images/banner.svg" layout='fill'/>

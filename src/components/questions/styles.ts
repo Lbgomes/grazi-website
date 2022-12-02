@@ -11,6 +11,9 @@ flex-direction: column;
 align-items: center;
 padding: 3rem 0;
 gap: 1rem;
+h1{
+  color: #8A4F58;
+}
 
 `
 export const ImageContainer = styled.div`

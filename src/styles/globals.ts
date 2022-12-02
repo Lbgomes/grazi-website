@@ -17,10 +17,10 @@ const GlobalStyles = createGlobalStyle`
       height: 0.5rem;
     }
     ::-webkit-scrollbar-track {
-      background: #0a0a0a;
+      background: #8A4F58;
     }
     ::-webkit-scrollbar-thumb {
-      background: #000;
+      background: #EEDDDA;
       border-radius: 1rem;
     }
     html {
@@ -81,6 +81,9 @@ const GlobalStyles = createGlobalStyle`
     }
     .styles__Arrow-sc-x8z8tz-0{
       bottom: 50%;
+      @media(max-width: 600px){
+        display: none;
+      }
     }
  
 `

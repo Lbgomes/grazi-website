@@ -1,7 +1,10 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-    width: 95rem;
+    width: 100rem;
+    @media(max-width: 1000px){
+        width: 80vw;
+    }
 `
 
 type TitleContainerProps = {

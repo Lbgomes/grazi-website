@@ -31,8 +31,11 @@ export default function Patients() {
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
         dots: true,
+        autoplay: true,
         infinite: true,
-        speed: 500,
+        speed: 300,
+        autoplaySpeed: 7000,
+        pauseOnHover: true,
         slidesToShow: 1,
         slidesToScroll: 1
       };
@@ -40,11 +43,11 @@ export default function Patients() {
     return(
         <S.Container>
             <S.Feedback>Feedbacks</S.Feedback>
-            <Slider {...settings}>
-            <Comment text='Daniela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Matheus' />           
-            <Comment text='Daniela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Murilo' />            
-            <Comment text='Daniela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Luiz' />
-            <Comment text='Daniela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Giullia' />
+            <Slider  {...settings}>
+            <Comment text='A Graziela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Matheus' />           
+            <Comment text='A Graziela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Murilo' />            
+            <Comment text='A Graziela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Luiz' />
+            <Comment text='A Graziela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Giullia' />
             </Slider>
         </S.Container>
     )

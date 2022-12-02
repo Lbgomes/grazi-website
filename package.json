@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@styled-icons/boxicons-logos": "^10.46.0",
     "@styled-icons/material-rounded": "^10.46.0",
     "framer-motion": "^7.6.15",
     "next": "12.2.5",

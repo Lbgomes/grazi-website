@@ -34,11 +34,10 @@ export const Text = styled.div`
     position: absolute;
     top: 20%;
     left: 17.5%;
-    max-width: 150rem;
     margin: 0 auto !important;
-    width: 100%;
     z-index: 10;
     @media (max-width: 768px) {
+    width: auto;
       top: 5%;
       left: 5%;
     }
@@ -64,15 +63,7 @@ export const Shadow = styled.span`
     left: 0;
     background-color: rgba(231, 213, 210, 0.65);
     opacity: 0.74;
-    @media (max-width: 768px) {
-      background: linear-gradient(0deg, rgba(16, 16, 16), rgba(0, 0, 0, 0.2)),
-        linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.132) 71.73%,
-          rgba(0 0 0 / 100%) 96.68%
-        ),
-        url(.jpg);
-    }
+
 `
 
 export const ButtonContainer = styled.div`
@@ -81,7 +72,7 @@ export const ButtonContainer = styled.div`
     left: 11%;
 `
 export const ImageContainer = styled.div`
-    margin-top: -50px;
+    margin-top: -49px;
     z-index: 123123;
     span{
       position: unset !important;
