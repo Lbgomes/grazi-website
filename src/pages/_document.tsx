@@ -1,5 +1,6 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import Script from 'next/script'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -22,7 +23,7 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         ),
-        
+
       }
     } finally {
       sheet.seal()
@@ -51,6 +52,22 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-5KQT6NB7DK" />
+        <Script
+          id='google-analytics'
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXX', {
+page_path: window.location.pathname,
+});
+`,
+          }}
+        />
         <body>
           <Main />
           <NextScript />
