@@ -53,8 +53,8 @@ export default function Header() {
                     aria-hidden={!menuIsOpen}
                 >
                     <S.InsideMenu as={motion.div}>
-                        {subElement.map((item) => (
-                            <Link href={item.path}  >
+                        {subElement.map((item, index) => (
+                            <Link href={item.path} key={index} >
                                 <S.LinkItem onClick={() => setMenuIsOpen(false)}>
                                     {item.name}
                                 </S.LinkItem>
