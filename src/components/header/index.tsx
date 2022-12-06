@@ -32,7 +32,7 @@ export default function Header() {
             <S.Container>
                 <S.web>
                     <S.LogoContainer>
-                        <Image src="/images/Logo.png" layout="fill" />
+                        <Image src="/images/Logo.png" layout="fill"  alt="logo escrito Grazi gomes"  />
                     </S.LogoContainer>
                     <S.Links>
                         <LinkHeader href='#home' title='Home' />

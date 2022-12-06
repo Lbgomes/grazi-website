@@ -11,6 +11,7 @@ export default function Footer() {
             <Image
               data-testid="logo"
               src={Logo}
+              alt="logo escrito Grazi gomes"
               layout="responsive"
               objectFit="cover"
             />

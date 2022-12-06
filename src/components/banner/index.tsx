@@ -8,7 +8,7 @@ export default function Banner() {
     <>
     <S.Container aria-label="banner" id='home'>
       <S.Image>
-        <Image src="/images/banner.jpg" layout="fill" />
+        <Image src="/images/banner.jpg" layout="fill" alt='sala de consulta' />
       </S.Image>
       <S.Text>
         <Title size="large" weight="extraBold" text="Terapia Online" />
