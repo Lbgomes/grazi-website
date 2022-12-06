@@ -6,7 +6,7 @@ import Waves from '../../../public/images/wavesNegative.svg'
 export default function Banner() {
   return (
     <>
-    <S.Container aria-label="banner">
+    <S.Container aria-label="banner" id='home'>
       <S.Image>
         <Image src="/images/banner.jpg" layout="fill" />
       </S.Image>

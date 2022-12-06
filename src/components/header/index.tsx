@@ -2,19 +2,80 @@ import * as S from './styles'
 import Image from 'next/image'
 import LinkHeader from '../LinkHeader'
 import Button from '../button'
+import { useClickAway } from 'react-use';
+import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import * as Ico from '@styled-icons/evaicons-outline'
+import { Menu } from '@styled-icons/entypo';
+import Link from 'next/link';
 
 export default function Header() {
-    return(
-        <S.Container>
-            <S.LogoContainer>
-                <Image src="/images/Logo.png" layout="fill"/>
-            </S.LogoContainer>
-            <S.Links>
-                <LinkHeader href='/' title='Home' />
-                <LinkHeader href='/Sobre' title='Sobre' />
-                <LinkHeader href='/Contato' title='Contato' />
-            </S.Links>
-            <Button title='Agendamentos' />
-        </S.Container>
+    const [menuIsOpen, setMenuIsOpen] = useState(false)
+
+    const reference = useRef(null)
+    useClickAway(reference, () => {
+        setMenuIsOpen(false)
+    })
+    const variants = {
+        open: { opacity: 1, x: 0 },
+        closed: { opacity: 0, x: '100%' }
+    }
+    const subElement = [
+        { path: '#home', name: 'Home' },
+        { path: '#profile', name: 'Sobre' },
+        { path: '#contact', name: 'Contato' }
+    ]
+
+
+    return (
+        <>
+            <S.Container>
+                <S.web>
+                    <S.LogoContainer>
+                        <Image src="/images/Logo.png" layout="fill" />
+                    </S.LogoContainer>
+                    <S.Links>
+                        <LinkHeader href='#home' title='Home' />
+                        <LinkHeader href='#profile' title='Sobre' />
+                        <LinkHeader href='#contact' title='Contato' />
+                    </S.Links>
+                    <Button title='Agendamentos' />
+                </S.web>
+            </S.Container>
+            <S.Mobile>
+                <S.MenuHamburguer
+                    ref={reference}
+                    as={motion.nav}
+                    initial={'closed'}
+                    animate={menuIsOpen ? 'open' : 'closed'}
+                    variants={variants}
+                    transition={{ duration: 0.5 }}
+                    aria-hidden={!menuIsOpen}
+                >
+                    <S.InsideMenu as={motion.div}>
+                        {subElement.map((item) => (
+                            <Link href={item.path}  >
+                                <S.LinkItem onClick={() => setMenuIsOpen(false)}>
+                                    {item.name}
+                                </S.LinkItem>
+                            </Link>
+                        )
+                        )}
+                    </S.InsideMenu>
+                </S.MenuHamburguer>
+
+                <S.HamburguerIcon
+                    as={motion.button}
+                    onClick={() => setMenuIsOpen(!menuIsOpen)}
+                    aria-label="Handle Menu"
+                >
+                    {menuIsOpen ? (
+                        <Ico.CloseOutline size="3rem" color="#fff" />
+                    ) : (
+                        <Menu size="3rem" color="#8A4F58" />
+                    )}
+                </S.HamburguerIcon>
+            </S.Mobile>
+        </>
     )
 }

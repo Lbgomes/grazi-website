@@ -3,7 +3,7 @@ import * as S from './styles'
 
 export default function Profile() {
     return (
-        <S.Container>
+        <S.Container id='profile'>
             <S.ImageContainer>
                 <Image src="/images/Vector.png" layout="fill" />
             </S.ImageContainer>
