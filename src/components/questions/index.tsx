@@ -8,7 +8,7 @@ export default function Questions() {
     return (
         <S.Container>
             <S.ImageContainer>
-                <Image src={Waves} layout='fill' alt="" />
+                <Image src={Waves} layout='fill' alt="waves" />
             </S.ImageContainer>
             <S.QuestionContainer>
                 <h1>Dúvidas frequentes</h1>

@@ -19,7 +19,7 @@ export default function Banner() {
       <S.Shadow />
     </S.Container>
       <S.ImageContainer>
-    <Image src={Waves} layout='fill'/>
+    <Image src={Waves} layout='fill' alt="waves"/>
       </S.ImageContainer>
       </>
   )
