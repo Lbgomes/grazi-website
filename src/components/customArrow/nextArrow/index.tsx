@@ -8,7 +8,7 @@ interface PrevButtonProps {
 
 export default function NextArrow({ onClick }: PrevButtonProps) {
   return (
-    <S.Arrow position="right" aria-label="NextArrow">
+    <S.Arrow position="right" >
       <button type="button" className="next-button" onClick={onClick}>
         <span className="icon">
           <ArrowBackIosNew size="2.5rem" color="#fff" />

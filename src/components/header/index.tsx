@@ -39,7 +39,7 @@ export default function Header() {
                         <LinkHeader href='#profile' title='Sobre' />
                         <LinkHeader href='#contact' title='Contato' />
                     </S.Links>
-                    <Button title='Agendamentos' />
+                    <Button title='Agendamentos' aria-label="Agendamentos" />
                 </S.web>
             </S.Container>
             <S.Mobile>
