@@ -45,6 +45,12 @@ text-align: left;
 color: #8A4F58;
 font-weight: 700;
 font-size: 22px;
+display: flex;
+flex-direction: column;
+.space{
+  margin: 0.5rem 0;
+  font-weight: 900;
+}
 `
 export const Text = styled.div`
 margin-top: 2rem;
