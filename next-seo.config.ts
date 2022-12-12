@@ -3,11 +3,11 @@ import { NextSeoProps } from 'next-seo'
 export default {
   title: 'Psicóloga Graziela Gomes',
   description: 'Psicóloga Graziela Gomes',
-  canonical: 'https://github.com/Alquipo/boilerplate',
+  canonical: 'https://psigrazigomes.com/',
   openGraph: {
     title: 'Graziela Gomes | Psicóloga Graziela Gomes',
     type: 'website',
-    url: 'https://github.com/Alquipo/boilerplate',
+    url: 'https://psigrazigomes.com/',
     locale: 'pt_BR',
     site_name: 'GraziGomes',
     description: 'Psicóloga paulista com atendimento online em São Paulo',

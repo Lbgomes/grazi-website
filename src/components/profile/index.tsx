@@ -5,15 +5,18 @@ export default function Profile() {
     return (
         <S.Container id='profile'>
             <S.ImageContainer>
-                <Image src="/images/Vector.png" layout="fill"  alt="Imagem Grazi gomes" />
+                <Image src="/images/Vector.png" layout="fill" alt="Imagem Grazi gomes" />
             </S.ImageContainer>
             <S.TextContainer>
                 <S.Title>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    É compreensível que as pessoas sintam alguma confusão e insegurança na hora  de escolher um psicólogo, devido a vários fatores.<br/>
+                    Exemplo, o seu estilo pessoal de abordar os problemas, qual o tipo de intervenção que irá utilizar,  ou  pense,  “terapia” será que será eficaz?
+                    Te convido a descobrir;<br/>                                                                                                                    você está a um passo de sua transformação pessoal
+                    Pare e dê uma chance a si mesmo.
                 </S.Title>
-                <S.Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt eu nibh vitae tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget ligula vehicula, pharetra dolor in, maximus lorem. Donec sit amet vestibulum sem. Integer suscipit enim quis posuere finibus. Duis vel rutrum justo. Etiam pretium tellus non diam fermentum, vitae tincidunt eros mattis. Aliquam faucibus lacinia ligula et sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut id ipsum quis nunc viverra tincidunt eget pulvinar dui. Suspendisse eget sapien id ante tristique gravida. Pellentesque consectetur et justo a suscipit. Morbi tincidunt nunc nunc, sed elementum ex rutrum vel.
-                </S.Text>
+                {/* <S.Text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt eu nibh vitae tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget ligula vehicula, pharetra dolor in, maximus lorem. Donec sit amet vestibulum sem. Integer suscipit enim quis posuere finibus. Duis vel rutrum justo. Etiam pretium tellus non diam fermentum, vitae tincidunt eros mattis. Aliquam faucibus lacinia ligula et sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut id ipsum quis nunc viverra tincidunt eget pulvinar dui. Suspendisse eget sapien id ante tristique gravida. Pellentesque consectetur et justo a suscipit. Morbi tincidunt nunc nunc, sed elementum ex rutrum vel.
+                </S.Text> */}
             </S.TextContainer>
         </S.Container>
     )
