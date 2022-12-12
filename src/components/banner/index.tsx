@@ -15,7 +15,6 @@ export default function Banner() {
         <S.SubTitle>Psicóloga especialista em relacionamentos interpessoais, adolescentes, adultos e casais.</S.SubTitle>
     <Button title='Agendar consulta' aria-label="agendar consulta" />
       </S.Text>
-    <Image src="/images/banner.svg" layout='fill' alt="consultório"/>
       <S.Shadow />
     </S.Container>
       <S.ImageContainer>
