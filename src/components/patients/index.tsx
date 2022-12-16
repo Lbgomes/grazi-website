@@ -17,7 +17,7 @@ function Comment({text, patient}: commentProps) {
                 {text}
             </S.Text>
             <S.Patient>
-                {patient}
+            Iniciais do Paciente:{' '}{patient}
             </S.Patient>
         </S.Comment>
     )
@@ -33,7 +33,7 @@ export default function Patients() {
         dots: true,
         autoplay: true,
         infinite: true,
-        speed: 300,
+        speed: 500,
         autoplaySpeed: 7000,
         pauseOnHover: true,
         slidesToShow: 1,
@@ -44,10 +44,15 @@ export default function Patients() {
         <S.Container>
             <S.Feedback>Feedbacks</S.Feedback>
             <Slider  {...settings}>
-            <Comment text='A Graziela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Matheus' />           
-            <Comment text='A Graziela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Murilo' />            
-            <Comment text='A Graziela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Luiz' />
-            <Comment text='A Graziela é uma profissional muito capacitada, sempre muito coerente e sabe conduzir o tratamento com acolhimento e delicadeza. Só tenho a agradecer sua escuta apurada. Um abraço!' patient='Giullia' />
+            <Comment text='Na primeira sessão já me senti acolhida e sai com boas respostas para o que estava me afligindo.' patient='LS' />           
+            <Comment text='Psicóloga super atenciosa! Adorei a sessão' patient='TFAC' />            
+            <Comment text='Todas as seções com a Grazi, são ótimas ! A cada semana, me conhecendo mais, reconhecendo o meu valor, me amando. Muito feliz com o processo.' patient='DDNP' />
+            <Comment text='A Grazi é uma profissional excepcional, aborda o tema de uma maneira objetiva.' patient='LLG' />
+            <Comment text='Muito bom, está me ajudando bastante' patient='DDNP' />
+            <Comment text='A Grazi é muito atenciosa e objetiva! Adorei a forma como ela aborda o tema trabalhado!' patient='LLG' />
+            <Comment text='Foi muito bom, me senti tão a vontade que quase não parei de falar. Muito obrigada Grazi por me passar tanta confiança e por me deixar a vontade.' patient='DDNP' />
+            <Comment text='Mto boa, Grazi é uma ótima psicóloga e consegue desenvolver uma boa conversa e nos acolher. Adoro mto minhas seções com ela.' patient='NAMS' />
+            <Comment text='Gostei da consulta, a Grazi é bem objetiva e atenciosa nos pontos que mais são importantes e relevantes.' patient='EADS' />
             </Slider>
         </S.Container>
     )
