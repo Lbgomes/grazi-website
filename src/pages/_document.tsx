@@ -17,12 +17,12 @@ export default class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {..props} />),
+            sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
       return {
-        ..initialProps,
+        ...initialProps,
         styles: (
           <>
             {initialProps.styles}
@@ -41,6 +41,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href="img/favicon.png" />
           <link rel="apple-touch-icon" href="img/favicon.png" />
+
           <title>Grazi Gomes</title>
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#f2f3f5" />
@@ -49,7 +50,9 @@ export default class MyDocument extends Document {
             name="description"
             content="Psicóloga | Terapia online."
           />
-
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
           <link rel="canonical" href="https://psigrazigomes.com/" />
           <meta property="og:locale" content="pt_BR" />
           <meta property="og:type" content="website" />

@@ -4,15 +4,16 @@ export const Wrapper = styled.div`
   align-items: center;
   display: flex;
   height: 100%;
+  background-color: #f3e2e2;
   width: 100%;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `
 
 export const Container = styled.div`
-  ${({ theme }) => css`
     display: flex;
-    justify-content: center;
     width: 100%;
-  `}
 `
 
 export const ContentsContainer = styled.div`
@@ -32,21 +33,7 @@ export const ContentsContainer = styled.div`
   `}
 `
 
-export const RightReserved = styled.div`
-  ${({ theme }) => css`
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 144rem;
-    padding: 0.8rem 1.8rem;
-    width: 100%;
-    @media screen and (min-width: ${theme.screen.large}) {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 0.8rem 3.2rem;
-    }
-  `}
-`
+
 
 export const LogoContent = styled.div`
   ${({ theme }) => css`
@@ -92,14 +79,25 @@ export const ListContent = styled.ul`
     }
   `}
 `
+export const RightReserved = styled.div`
+  ${({ theme }) => css`
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 1.8rem;
+    width: fit-content;
+    align-items: start;
+
+  `}
+`
 
 export const RightContent = styled.span`
   ${({ theme }) => css`
-    font-size: 1rem;
-    line-height: 1.5rem;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
     text-align: center;
-    @media screen and (min-width: ${theme.screen.large}) {
-      font-size: ${theme.font.sizes.small};
+    @media (max-width: 800px) {
       line-height: 2.1rem;
     }
   `}

@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components'
-
 const GlobalStyles = createGlobalStyle`
   *{
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -11,18 +11,7 @@ const GlobalStyles = createGlobalStyle`
       box-sizing: inherit;
     }
   }
-    //scrollbar configuration
-    ::-webkit-scrollbar {
-      width: 0.5rem;
-      height: 0.5rem;
-    }
-    ::-webkit-scrollbar-track {
-      background: #8A4F58;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #EEDDDA;
-      border-radius: 1rem;
-    }
+
     html {
       font-size: 62.5%;
       scroll-behavior: smooth;
@@ -79,8 +68,13 @@ const GlobalStyles = createGlobalStyle`
     .swal2-popup {
       font-size: 2rem !important;
     }
-
- 
+    iframe: {
+    height: 650px !important;
+}
+    @font-face {
+  font-family: "clash";
+  src: url('./fonts/ClashDisplay-Variable.ttf') format("truetype");
+}
 `
 
 

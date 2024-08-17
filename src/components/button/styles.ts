@@ -1,23 +1,23 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 
 export const Container = styled.a`
+    ${({ theme }) => css`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #EEDDDA;
+    color: #fff;
     text-decoration: none;
-    background: #8A4F58;
+    background: ${theme.colors.button};
     cursor: pointer;
-    padding: 1rem;
-    border-radius: 0.6rem;
-    font-size: 2rem;
-    font-weight: 500;
-    height: 5rem;
-    width: 18rem;
-    transition: 0.2s;
+    padding: 1rem 1.25rem;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    height: 44px;
+    text-transform: uppercase;
+    transition: 0.3s;
     line-height: 1;
-    :hover{
-        background: #6A1D2A;
-    }
+
+    `}
 `;

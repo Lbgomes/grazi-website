@@ -32,19 +32,19 @@ export default function Header() {
             <S.Container>
                 <S.web>
                     <S.LogoContainer>
-                        <Image src="/images/Logo.png" layout="fill"  alt="logo escrito Grazi gomes"  />
+                        <Image src="/images/Logo.png" layout="fill" alt="logo escrito Grazi gomes" />
                     </S.LogoContainer>
                     <S.Links>
-                        <LinkHeader href='#home' title='Home' />
-                        <LinkHeader href='#profile' title='Sobre' />
-                        <LinkHeader href='#contact' title='Contato' />
+                        <LinkHeader href='#home' title='Sobre' />
+                        <LinkHeader href='#profile' title='Método' />
+                        <LinkHeader href='#contact' title='Pacientes' />
+                        <Button title='Marque uma sessão' aria-label="Agendamentos" />
                     </S.Links>
-                    <Button title='Agendamentos' aria-label="Agendamentos" />
                 </S.web>
             </S.Container>
-            <S.Mobile>
+            <S.Mobile  ref={reference}>
                 <S.MenuHamburguer
-                    ref={reference}
+                   
                     as={motion.nav}
                     initial={'closed'}
                     animate={menuIsOpen ? 'open' : 'closed'}
@@ -61,6 +61,10 @@ export default function Header() {
                             </Link>
                         )
                         )}
+                        <S.ButtonContainer>
+
+                            <Button title='Marque uma sessão' aria-label="Agendamentos" />
+                        </S.ButtonContainer>
                     </S.InsideMenu>
                 </S.MenuHamburguer>
 

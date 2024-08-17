@@ -21,10 +21,13 @@ export default function Footer() {
 
       <S.RightReserved>
         <S.RightContent>
-          © Plataforma 2022 Murilo Gomes. Todos os direitos reservados
+          Graziela B. Gomes
         </S.RightContent>
         <S.RightContent>
-          Graziela Barbosa Gomes CRP: 123456
+          <strong>CRP:</strong> 183637-6 | São Paulo
+        </S.RightContent>
+        <S.RightContent>
+          <strong> BPS UK: </strong>687171
         </S.RightContent>
       </S.RightReserved>
     </S.Wrapper>

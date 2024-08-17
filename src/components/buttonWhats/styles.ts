@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 
 export const Container = styled.a`
-width: 20rem;
+    width: fit-content;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,11 +11,14 @@ width: 20rem;
     text-decoration: none;
     background: white;
     cursor: pointer;
-    border-radius: 0.6rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
     font-weight: 500;
     height: 5rem;
     transition: 0.3s;
+    color: white;
+    background-color: #cf7171;
     line-height: 1;
     :hover{
         scale: 1.01;

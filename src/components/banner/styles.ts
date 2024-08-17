@@ -1,59 +1,70 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
-    position: relative;
-    text-align: center;
-    color: white;
-    height: 60vh;
-    background-image: url( '/images/wavesNegative.svg');
-    z-index: -10;
-    @media (max-width: 768px) {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4/3;
-    }
+${({ theme }) => css`
+  background-color: ${theme.colors.banner};
+  color: white;
+  justify-content: center;
+  height: 53vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  overflow: hidden;
+
+  `}
 `
-export const Image = styled.div`
-    & > span {
-      height: 100% !important;
-      @media (max-width: 768px) {
-        width: 100% !important;
-        aspect-ratio: 4/3;
-      }
-    }
-    & > span > img {
-      object-fit: cover;
-      object-position: center;
-    }
+export const Title = styled.h1`
+  color: #521414;
+  max-width: 100rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: clamp(
+    3rem,
+    4vw,
+    5.4rem
+  );
+font-family: "Bitter", serif;
+font-weight: 400;
+  text-transform: uppercase;
+
+  @media(max-width: 800px){
+    width: 90%;
+}
 `
 
-export const Text = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    position: absolute;
-    top: 20%;
-    left: 17.5%;
-    margin: 0 auto !important;
-    z-index: 10;
-    @media (max-width: 768px) {
-    width: auto;
-      top: 10%;
-      left: 5%;
-    }
-`
+// Your existing styled component
+export const Image = styled.div`
+  width: 200px !important;
+  height: 120px !important;
+  
+  span, img {
+    position: unset !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  & > span > img {
+    object-fit: contain;
+    object-position: center;
+    width: 100% !important;
+    height: 100% !important;
+  }
+`;
 
 
 export const SubTitle = styled.h1`
     font-size: clamp(
       1.2rem,
       4vw,
-      1.7rem
+      1.4rem
     );
     font-weight: 300;
-    max-width: 47rem;
     text-align: left;
     color: black;
+    @media(max-width: 800px){
+    width: 90%;
+}
 `
 export const Shadow = styled.span`
     position: absolute;
@@ -70,18 +81,5 @@ export const ButtonContainer = styled.div`
     position: absolute;
     top: 50%;
     left: 11%;
-`
-export const ImageContainer = styled.div`
-    margin-top: -49px;
-    z-index: 123123;
-    span{
-      position: unset !important;
-      max-height: 50px;
-    height: 100%;
-    img{
-      position: unset !important;
-      height: 50px !important;
-    }
-    }
 `
 

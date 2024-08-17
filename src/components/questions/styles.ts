@@ -1,31 +1,51 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-margin-top: 8rem;
+  max-width: 160rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10rem 0;
+  gap: 4rem;
+
+  @media(max-width: 800px){
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+`
+
+export const Title = styled.h2`
+  text-transform: uppercase;
+  font-size: 3.8rem;
+  max-width: 16rem;
+  text-align: center;
+
+  @media(max-width: 800px){
+  font-size: 2.8rem;
+  max-width: 100%;
+  }
+`
+
+export const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 130rem;
+  @media(max-width: 800px){
+  max-width: 80%;
+  }
+`
+
+export const Item = styled.li`
+  display: flex;
+  align-items: start;
+  gap: 1.6rem;
+  font-size: 1.4rem;
 
 `
-export const QuestionContainer = styled.div`
-background: #EEDDDA;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 3rem 0;
-gap: 1rem;
-h1{
-  color: #8A4F58;
-}
 
-`
-export const ImageContainer = styled.div`
-    margin-bottom: -50px;
-    z-index: 123123;
-    span{
-      position: unset !important;
-      max-height: 50px;
-    height: 100%;
-    img{
-      position: unset !important;
-      height: 50px !important;
-    }
-    }
+export const Text = styled.p`
+  font-size: 1.4rem;
 `

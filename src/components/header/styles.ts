@@ -1,29 +1,38 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
+  ${({ theme }) => css`
   display: flex;
-  padding: 1rem;
-  max-width: 150rem;
+  padding: 2.4rem;
+  font-family: Arial, sans-serif;
+  background-color: ${theme.colors.banner};
+  align-items: center;
   margin: 0 auto;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 @media(max-width: 800px){
   display: none;
 }
+
+  `}
 `;
 export const LogoContainer = styled.div`
     aspect-ratio:75/38;
-    width: 10rem !important;
+    width: 8rem !important;
+    align-content: center;
     span > img {
-      width: 10rem !important;
+      width: 8rem !important;
 
     }
     > span {
     position: static !important;
-    width: 10rem !important;
+    width: 8rem !important;
 
     img{
-      width: 10rem !important;
+      width: 8rem !important;
     }
 
     }
@@ -35,7 +44,6 @@ export const LogoContainer = styled.div`
     margin: 0 !important;
   }
 `;
-
 export const Links = styled.div`
   display: flex;
   align-items: center;
@@ -44,7 +52,7 @@ export const Links = styled.div`
 
 export const web = styled.div`
   display: flex;
-  max-width: 150rem;
+  max-width: 180rem;
   width: 100%;
 
 justify-content: space-between;
@@ -76,22 +84,24 @@ export const MenuHamburguer = styled.div`
     height: 100vh;
     width: 60%;
     z-index: ${theme.layers.overlay};
-    box-shadow: -12px 0px 26px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.6);
     background: ${theme.colors.primary};
   `}
 `
 export const InsideMenu = styled.div`
   ${({ theme }) => css`
+  width: 100%;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
     padding-top: ${theme.spacings.xxlarge};
-    z-index: ${theme.layers.overlay};
 
   `}
+`
+
+export const ButtonContainer = styled.div`
+width: 90%;
+align-self: center;
+  margin-top: 2rem;
 `
 export const LinkItem = styled.div`
   ${({ theme }) => css`

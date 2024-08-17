@@ -16,9 +16,8 @@ const Home: NextPage = () => {
       <Header />
       <Banner />
       <Profile />
-      <Apointment />
-      <Patients /> 
       <Questions />
+      <Apointment />
       <Footer />
     </>
 
