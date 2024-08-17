@@ -7,7 +7,7 @@ import Document, {
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import Script from "next/script";
-
+import asd from '../../public/images/Logo.png'
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
@@ -39,8 +39,9 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="shortcut icon" href="img/favicon.png" />
-          <link rel="apple-touch-icon" href="img/favicon.png" />
+          <link rel="icon" type="image/x-icon" href="/images/Logo.png" />
+          <link rel="shortcut icon" href="../../public/images/Logo.png" />
+          <link rel="apple-touch-icon" href="../../public/images/Logo.png" />
 
           <title>Grazi Gomes</title>
           <link rel="manifest" href="/manifest.json" />
