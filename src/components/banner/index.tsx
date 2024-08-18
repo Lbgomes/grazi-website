@@ -6,7 +6,37 @@ import { useState } from 'react';
 export default function Banner() {
 
   const controls = useAnimation();
-  const [isHovered, setIsHovered] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false)
+  const handleHoverStart = () => {
+    if (!hasAnimated) {
+      controls.start({
+        x: ['0vw', '100vw'],
+        transition: {
+          duration: 3,
+          ease: 'easeInOut',
+          times: [0, 1],
+          opacity: [1, 0],
+        },
+      });
+    }
+  };
+
+  const handleAnimationEnd = () => {
+    if (!hasAnimated) {
+      setHasAnimated(true);
+      controls.start({
+        x: ['-100vw', '0vw'],
+        transition: {
+          duration: 2,
+          times: [0, 1],
+          ease: 'easeInOut',
+        },
+      }).then(() => {
+        // Reset the state to allow hover-triggered animation again
+        setHasAnimated(false);
+      });
+    }
+  };
 
 
   return (
@@ -16,29 +46,9 @@ export default function Banner() {
         <S.SubTitle>Cuidar da saúde mental é fundamental, independentemente de onde você esteja. Sou a Grazi, uma psicóloga brasileira, e ofereço suporte e orientação em português para brasileiros ao redor do mundo.</S.SubTitle>
         <motion.div
           initial={{ x: '0vw' }}
-          animate={controls} 
-          onHoverStart={() => {
-            controls.start({
-              x: ['0vw', '100vw'],
-              transition: {
-                duration: 4, 
-                ease: 'easeInOut', 
-                times: [0, 1], 
-                opacity: [1, 0],
-              },
-            });
-            setIsHovered(true);
-          }}
-          onHoverEnd={() => {
-            controls.start({
-              x: '-0vw', 
-              transition: {
-                duration: 2, 
-                ease: 'easeInOut',
-              },
-            })
-            setIsHovered(false);
-          }}
+          animate={controls}
+          onHoverStart={handleHoverStart}
+          onAnimationComplete={handleAnimationEnd}
         >
 
           <S.Image>
